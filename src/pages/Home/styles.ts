@@ -118,7 +118,7 @@ export const TextCardContent = styled.span`
 
 export const ModalContent = styled.div`
   position: absolute;
-  width: 400px;
+  width: 350px;
   background-color: ${props => props.theme.colors.backgroudSecondary};
   padding: 2rem;
 
