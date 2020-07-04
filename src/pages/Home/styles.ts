@@ -118,7 +118,7 @@ export const TextCardContent = styled.span`
 
 export const ModalContent = styled.div`
   position: absolute;
-  width: 350px;
+  width: 550px;
   background-color: ${props => props.theme.colors.backgroudSecondary};
   padding: 2rem;
 
@@ -127,7 +127,7 @@ export const ModalContent = styled.div`
   transform: translate(-50%, -50%);
 
   span {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     color: ${props => props.theme.colors.textSecondary};
   }
 
