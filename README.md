@@ -8,7 +8,7 @@ RD é um desáfio de layout proposto em react.
 
 ### Instalação
 
-- renomeie o arquivo **.env-example** para **.env**
+- renomear o arquivo **.env-example** para **.env**
 - `$ yarn install`
 
 ### Executar
