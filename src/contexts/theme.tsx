@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useState, useContext, useCallback } from 'react';
 import { DefaultTheme } from 'styled-components';
 
 import primary from '@styles/themes/primary';
@@ -9,16 +9,14 @@ interface ThemeContextData {
   selectTheme(): void;
 }
 
-const ThemeRDContext = createContext<ThemeContextData>({
-  theme: primary,
-} as ThemeContextData);
+const ThemeRDContext = createContext<ThemeContextData>({} as ThemeContextData);
 
 export const ThemeRDProvider: React.FC = ({ children }: React.Props<{}>) => {
   const [theme, setTheme] = useState<DefaultTheme>(primary);
 
-  const selectTheme = () => {
+  const selectTheme = useCallback(() => {
     setTheme(t => (t.title === 'primary' ? blackfriday : primary));
-  };
+  }, []);
 
   return (
     <ThemeRDContext.Provider

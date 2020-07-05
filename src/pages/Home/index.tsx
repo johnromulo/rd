@@ -28,7 +28,7 @@ const Home: React.FC = () => {
   const { colors } = useContext(ThemeContext);
   const { selectTheme } = useThemeRD();
 
-  const [showSesktopInfo, setShowDesktopInfo] = useState(false);
+  const [showDesktopInfo, setShowDesktopInfo] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -74,14 +74,26 @@ const Home: React.FC = () => {
             typecard="desktop"
             textButton="Leia mais..."
             onClick={() => {
-              setShowDesktopInfo(!showSesktopInfo);
+              setShowDesktopInfo(!showDesktopInfo);
             }}
           >
             <TextCardContent>
               Quando pressionado o botão <b>Leia mais...</b> o restante da
               informação deverá aparecer em scroll down.{' '}
-              {showSesktopInfo &&
-                `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`}
+              {showDesktopInfo && (
+                <span data-testid="desktop-info">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book. It has survived not only five centuries, but
+                  also the leap into electronic typesetting, remaining
+                  essentially unchanged. It was popularised in the 1960s with
+                  the release of Letraset sheets containing Lorem Ipsum
+                  passages, and more recently with desktop publishing software
+                  like Aldus PageMaker including versions of Lorem Ipsum.
+                </span>
+              )}
             </TextCardContent>
           </Card>
           <Card
@@ -118,7 +130,7 @@ const Home: React.FC = () => {
         aria-describedby="simple-modal-description"
       >
         <ModalContent>
-          <span>
+          <span data-testid="modal-tablet-info">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry standard dummy text ever
             since the 1500s, when an unknown printer took a galley of type and
