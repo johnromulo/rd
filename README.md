@@ -21,3 +21,9 @@ RD é um desáfio de layout proposto em react.
 
 - `$ yarn build`
 - `$ yarn serve`
+
+### Testes
+
+- `$ yarn test`
+  ou
+- `$ yarn test:coverage`
