@@ -26,7 +26,7 @@ const Card: React.FC<CardProps> = ({
   onClick,
 }: CardProps) => {
   return (
-    <Wrap>
+    <Wrap data-testid={`card-${typecard}`}>
       <Container>
         <ImageContainer typestyle={typecard}>
           <Image typestyle={typecard} />
@@ -38,7 +38,11 @@ const Card: React.FC<CardProps> = ({
           </Scroll>
         </TextContainer>
         <ButtonContainer>
-          <ButtonMore typestyle={typecard} onClick={onClick}>
+          <ButtonMore
+            data-testid={`card-button-${typecard}`}
+            typestyle={typecard}
+            onClick={onClick}
+          >
             {textButton}
           </ButtonMore>
         </ButtonContainer>
