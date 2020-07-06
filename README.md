@@ -1,6 +1,6 @@
 ## RD
 
-RD é um desáfio de layout proposto em react.
+RD é um desafio de layout proposto em react.
 
 ### Demo
 
